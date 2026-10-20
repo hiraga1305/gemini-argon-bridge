@@ -1,0 +1,61 @@
+{
+  "name": "gemini-argon-bridge",
+  "version": "0.2.0-alpha.1",
+  "description": "Experimental local CLI and MCP bridge for consulting the Argon selection in Gemini Web through browser CDP",
+  "main": "src/cdp-client.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiraga1305/gemini-argon-bridge.git"
+  },
+  "homepage": "https://github.com/hiraga1305/gemini-argon-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/hiraga1305/gemini-argon-bridge/issues"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "skills/",
+    "rules/",
+    "adapters/",
+    "scripts/",
+    "docs/USAGE.md",
+    "mcp_config.json",
+    "plugin.json",
+    "README.md",
+    "README_VI.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "ask-argon": "./bin/ask-argon.js",
+    "argon-mcp": "./src/mcp-server.js"
+  },
+  "scripts": {
+    "start": "node bin/ask-argon.js",
+    "mcp": "node src/mcp-server.js",
+    "test": "node --test test/bridge.test.cjs test/mcp.test.cjs",
+    "test:browser": "node test/browser-fixture.cjs",
+    "pack:check": "npm pack --dry-run",
+    "launch:edge": "scripts/start_edge.bat",
+    "launch:chrome": "scripts/start_chrome.bat"
+  },
+  "keywords": [
+    "antigravity",
+    "claude-code",
+    "cursor",
+    "codex",
+    "gemini",
+    "argon",
+    "playwright",
+    "cdp",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright-core": "^1.64.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

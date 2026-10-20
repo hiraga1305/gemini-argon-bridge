@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "gemini-argon-bridge": {
+      "command": "argon-mcp",
+      "args": []
+    }
+  }
+}

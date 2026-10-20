@@ -1,0 +1,8 @@
+# Example only. Install the package globally first so `argon-mcp` is available
+# on PATH. Increase Codex's default 60-second per-tool timeout above the bridge
+# default deadline of 600 seconds.
+[mcp_servers.gemini_argon]
+command = "argon-mcp"
+args = []
+startup_timeout_sec = 15
+tool_timeout_sec = 660

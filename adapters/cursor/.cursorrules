@@ -1,0 +1,12 @@
+# Cursor rules example for Gemini Argon Bridge
+
+This package is experimental. Do not send code, logs, or other context unless the user authorized it to be sent to the signed-in Gemini Web account.
+
+When the user requests consultation with Gemini Argon:
+1. If `ask_gemini_argon` is listed and the user authorized the supplied context, call it with only relevant context.
+2. Otherwise, if `ask-argon` is installed and the user authorized the supplied context, run:
+   ```bash
+   ask-argon --prompt "<Query>" --context "<Authorized context>"
+   ```
+3. Treat `modelLabelObserved` as visible UI evidence, not backend verification. Explain that the bridge currently supports Gemini Web only.
+4. Synthesize the response and assess its suggestions independently.

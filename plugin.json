@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "gemini-argon-bridge",
+  "description": "Experimental local CLI and MCP bridge for Gemini Web. Requires a globally installed Argon Bridge package and explicit user consent for sent context."
+}

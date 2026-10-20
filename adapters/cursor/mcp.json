@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "gemini-argon": {
+      "type": "stdio",
+      "command": "argon-mcp",
+      "args": []
+    }
+  }
+}

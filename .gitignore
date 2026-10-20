@@ -1,0 +1,15 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+temp_*.txt
+*.tmp
+.env
+.env.*
+!.env.example
+ArgonProfile/
+argon-fixture-*/
+audit/
+docs/REMEDIATION_PLAN_VI.md
+docs/INDEPENDENT_AUDIT_CHECKLIST.md
+*.tgz
