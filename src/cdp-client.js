@@ -235,12 +235,14 @@ async function readModelEvidence(page, deadline, signal) {
     throw bridgeError('MODEL_AMBIGUOUS', 'More than one visible model control identifies Argon; the request was not submitted.');
   }
   const control = controls[0];
-  const selected = control.label.match(/(?:hiện tại là|current model:)\s*(.+)$/i)?.[1]?.trim();
+  const selected = control.label.match(/(?:hiện tại là|current model:|currently)\s*(.+)$/i)?.[1]?.trim();
   if (!selected) {
     throw bridgeError('MODEL_UNCONFIRMED', 'The visible model control does not expose a recognized current-model label; the request was not submitted.');
   }
   const modelLabelObserved = selected;
-  if (control.text && control.text.toLocaleLowerCase() !== modelLabelObserved.toLocaleLowerCase()) {
+  const normText = (control.text || '').replace(/\s+/g, ' ').trim().toLocaleLowerCase();
+  const normObserved = modelLabelObserved.replace(/\s+/g, ' ').trim().toLocaleLowerCase();
+  if (control.text && normText !== normObserved) {
     throw bridgeError('MODEL_CONTROL_CONFLICT', 'The current-model control label and visible value disagree; the request was not submitted.');
   }
   if (!/\bargon\b/i.test(modelLabelObserved)) {

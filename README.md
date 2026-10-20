@@ -22,6 +22,13 @@ ask-argon --list-tabs
 
 The list operation only reads open Gemini Web tabs. If more than one is listed, pass the selected target ID with `--tab`.
 
+## Antigravity Slash Command (`/argon`)
+
+In Google Antigravity, you can use the bridge directly from the chat interface without manual terminal commands:
+- Type **`/argon <your prompt or question>`** in the chat box.
+- The agent automatically checks if port 9222 is alive, launches the browser with the isolated profile if needed, transmits your prompt, and returns Gemini 4 Argon's deep reasoning output directly in chat.
+- Both `/argon` and `/ask-argon` slash commands are registered as first-class skills.
+
 ## CLI
 
 ```sh

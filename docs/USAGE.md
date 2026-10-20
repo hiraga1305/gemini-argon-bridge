@@ -26,6 +26,13 @@ ask-argon --prompt "Review this error" --context "Relevant approved context" --t
 
 The CLI also accepts a positional prompt, `--file <path>`, or UTF-8 stdin. `--timeout` sets one total deadline in seconds. `ARGON_TIMEOUT_SEC` and `ARGON_CDP_ENDPOINT` supply environment defaults; explicit CLI options take precedence. JSON mode writes one result object to stdout and sends progress to stderr.
 
+## Antigravity Slash Command (`/argon`)
+
+When used in Google Antigravity, the bridge is accessible directly via chat slash commands:
+- Type **`/argon <prompt>`** or **`/ask-argon <prompt>`** in the chat box.
+- The `/argon` skill automatically verifies if port 9222 is alive, launches Chrome or Edge with CDP if needed, attaches to Gemini Web, and streams the completed reasoning turn back into the chat.
+- See [`../adapters/antigravity/README.md`](../adapters/antigravity/README.md) for full configuration.
+
 ## MCP
 
 Run `argon-mcp` as a stdio MCP server. The `ask_gemini_argon` tool accepts `prompt`, optional `context`, `timeoutSeconds`, and `tabId`. Configure the MCP host's tool timeout to exceed `timeoutSeconds` so the bridge can return a structured timeout or cancellation result.

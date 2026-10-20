@@ -11,7 +11,9 @@ const GEMINI_WEB = Object.freeze({
     'button[aria-label^="Mở công cụ chọn chế độ" i]',
     '[role="button"][aria-label^="Mở công cụ chọn chế độ" i]',
     'button[aria-label^="Current model:" i]',
-    '[role="button"][aria-label^="Current model:" i]'
+    '[role="button"][aria-label^="Current model:" i]',
+    'button[aria-label^="Open mode picker" i]',
+    '[role="button"][aria-label^="Open mode picker" i]'
   ].join(','),
   inputSelectors: [
     'rich-textarea div.ql-editor[contenteditable="true"]',

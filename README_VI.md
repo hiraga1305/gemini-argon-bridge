@@ -22,6 +22,12 @@ ask-argon --list-tabs
 
 Lệnh này chỉ đọc các tab Gemini Web đang mở. Nếu có nhiều tab, truyền đúng target ID bằng `--tab`.
 
+## Lệnh Slash Command trong Antigravity (`/argon`)
+
+Trong Google Antigravity, bạn có thể gọi bridge trực tiếp từ khung chat mà không cần gõ lệnh terminal thủ công:
+- Gõ **`/argon <câu hỏi hoặc nhiệm vụ>`** hoặc **`/ask-argon <nội dung>`** trong ô chat.
+- Hệ thống sẽ tự động kiểm tra cổng 9222, tự khởi động Chrome/Edge nếu cổng chưa mở, gửi prompt sang Gemini 4 Argon và in kết quả phân tích suy luận sâu trực tiếp vào cuộc hội thoại.
+
 ## CLI
 
 ```sh
